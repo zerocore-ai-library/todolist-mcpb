@@ -11,15 +11,11 @@
   },
   "server": {
     "type": "binary",
-    "entry_point": "dist/todolist-linux-x86_64",
+    "entry_point": "dist/todolist",
     "mcp_config": {
-      "command": "${__dirname}/dist/todolist-linux-x86_64",
+      "command": "${__dirname}/dist/todolist",
       "args": [],
-      "env": {},
-      "platform_overrides": {
-        "darwin": { "command": "${__dirname}/dist/todolist-darwin-arm64" },
-        "linux": { "command": "${__dirname}/dist/todolist-linux-x86_64" }
-      }
+      "env": {}
     }
   },
   "tools": [
@@ -32,23 +28,10 @@
       "description": "Replace the entire todo list"
     }
   ],
-  "compatibility": {
-    "platforms": ["darwin", "linux"]
-  },
   "_meta": {
     "store.tool.mcpb": {
       "scripts": {
         "build": "cargo build --release"
-      },
-      "mcp_config": {
-        "platform_overrides": {
-          "darwin-arm64": { "command": "${__dirname}/dist/todolist-darwin-arm64" },
-          "linux-arm64": { "command": "${__dirname}/dist/todolist-linux-arm64" },
-          "linux-x86_64": { "command": "${__dirname}/dist/todolist-linux-x86_64" }
-        }
-      },
-      "compatibility": {
-        "platforms": ["darwin-arm64", "linux-arm64", "linux-x86_64"]
       },
       "static_responses": {
         "tools/list": {
