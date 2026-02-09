@@ -29,7 +29,11 @@
     }
   ],
   "compatibility": {
-    "platforms": ["darwin", "linux", "win32"]
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ]
   },
   "_meta": {
     "store.tool.mcpb": {
@@ -37,7 +41,14 @@
         "build": "cargo build --release"
       },
       "compatibility": {
-        "platforms": ["darwin-arm64", "darwin-x86_64", "linux-arm64", "linux-x86_64", "win32-arm64", "win32-x86_64"]
+        "platforms": [
+          "darwin-arm64",
+          "darwin-x86_64",
+          "linux-arm64",
+          "linux-x86_64",
+          "win32-arm64",
+          "win32-x86_64"
+        ]
       },
       "static_responses": {
         "tools/list": {
@@ -64,7 +75,11 @@
                         },
                         "status": {
                           "type": "string",
-                          "enum": ["pending", "in_progress", "completed"],
+                          "enum": [
+                            "pending",
+                            "in_progress",
+                            "completed"
+                          ],
                           "description": "Current status of the task"
                         },
                         "activeForm": {
@@ -72,23 +87,47 @@
                           "description": "Task description in present continuous form (e.g., \"Fixing authentication bug\")"
                         }
                       },
-                      "required": ["content", "status", "activeForm"]
+                      "required": [
+                        "content",
+                        "status",
+                        "activeForm"
+                      ]
                     },
                     "description": "The current list of todos"
                   },
                   "summary": {
                     "type": "object",
                     "properties": {
-                      "total": { "type": "integer", "description": "Total number of items in the list" },
-                      "pending": { "type": "integer", "description": "Number of pending items" },
-                      "in_progress": { "type": "integer", "description": "Number of in-progress items" },
-                      "completed": { "type": "integer", "description": "Number of completed items" }
+                      "total": {
+                        "type": "integer",
+                        "description": "Total number of items in the list"
+                      },
+                      "pending": {
+                        "type": "integer",
+                        "description": "Number of pending items"
+                      },
+                      "in_progress": {
+                        "type": "integer",
+                        "description": "Number of in-progress items"
+                      },
+                      "completed": {
+                        "type": "integer",
+                        "description": "Number of completed items"
+                      }
                     },
-                    "required": ["total", "pending", "in_progress", "completed"],
+                    "required": [
+                      "total",
+                      "pending",
+                      "in_progress",
+                      "completed"
+                    ],
                     "description": "Summary of todo statuses"
                   }
                 },
-                "required": ["todos", "summary"]
+                "required": [
+                  "todos",
+                  "summary"
+                ]
               }
             },
             {
@@ -108,7 +147,11 @@
                         },
                         "status": {
                           "type": "string",
-                          "enum": ["pending", "in_progress", "completed"],
+                          "enum": [
+                            "pending",
+                            "in_progress",
+                            "completed"
+                          ],
                           "description": "Current status of the task"
                         },
                         "activeForm": {
@@ -116,12 +159,18 @@
                           "description": "Task description in present continuous form (e.g., \"Fixing authentication bug\")"
                         }
                       },
-                      "required": ["content", "status", "activeForm"]
+                      "required": [
+                        "content",
+                        "status",
+                        "activeForm"
+                      ]
                     },
                     "description": "The complete list of todos to set"
                   }
                 },
-                "required": ["todos"]
+                "required": [
+                  "todos"
+                ]
               },
               "output_schema": {
                 "type": "object",
@@ -129,21 +178,41 @@
                   "summary": {
                     "type": "object",
                     "properties": {
-                      "total": { "type": "integer", "description": "Total number of items in the list" },
-                      "pending": { "type": "integer", "description": "Number of pending items" },
-                      "in_progress": { "type": "integer", "description": "Number of in-progress items" },
-                      "completed": { "type": "integer", "description": "Number of completed items" }
+                      "total": {
+                        "type": "integer",
+                        "description": "Total number of items in the list"
+                      },
+                      "pending": {
+                        "type": "integer",
+                        "description": "Number of pending items"
+                      },
+                      "in_progress": {
+                        "type": "integer",
+                        "description": "Number of in-progress items"
+                      },
+                      "completed": {
+                        "type": "integer",
+                        "description": "Number of completed items"
+                      }
                     },
-                    "required": ["total", "pending", "in_progress", "completed"],
+                    "required": [
+                      "total",
+                      "pending",
+                      "in_progress",
+                      "completed"
+                    ],
                     "description": "Summary of todo statuses after the update"
                   }
                 },
-                "required": ["summary"]
+                "required": [
+                  "summary"
+                ]
               }
             }
           ]
         }
       }
     }
-  }
+  },
+  "documentation": "https://github.com/zerocore-ai-library/todolist-mcpb"
 }
