@@ -28,10 +28,16 @@
       "description": "Replace the entire todo list"
     }
   ],
+  "compatibility": {
+    "platforms": ["darwin", "linux", "win32"]
+  },
   "_meta": {
     "store.tool.mcpb": {
       "scripts": {
         "build": "cargo build --release"
+      },
+      "compatibility": {
+        "platforms": ["darwin-arm64", "darwin-x86_64", "linux-arm64", "linux-x86_64", "win32-arm64", "win32-x86_64"]
       },
       "static_responses": {
         "tools/list": {
