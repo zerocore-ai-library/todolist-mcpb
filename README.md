@@ -4,35 +4,23 @@ Session-scoped task tracking for AI agents. Based on [Claude Code's TodoWrite to
 
 ## Setup
 
-### Using tool CLI (Recommended)
+### Using tool CLI
 
-Install from https://github.com/zerocore-ai/tool-cli
+Install the CLI from https://github.com/zerocore-ai/tool-cli
 
 ```bash
-# Build the tool
-tool run build /path/to/todolist
+# Install from tool.store
+tool install library/todolist
 ```
 
 ```bash
-# Validate the manifest
-tool validate /path/to/todolist
+# View available tools
+tool info library/todolist
 ```
 
 ```bash
 # Get current todos
-tool call /path/to/todolist -m get
-```
-
-### Manual Build
-
-```bash
-cargo build --release
-```
-
-## Testing
-
-```bash
-cargo test
+tool call library/todolist -m get
 ```
 
 ## Tools
