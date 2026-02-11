@@ -242,7 +242,7 @@ impl Server {
     ///
     /// Returns all todos with their current status and a summary.
     #[tool(
-        name = "todolist__get",
+        name = "get",
         description = "Get the current state of the todo list."
     )]
     async fn get(&self, _params: Parameters<GetInput>) -> Result<Json<GetOutput>, McpError> {
@@ -262,7 +262,7 @@ impl Server {
     /// - Content and activeForm must not be empty
     /// - Only one item can have in_progress status
     #[tool(
-        name = "todolist__set",
+        name = "set",
         description = "Replace the entire todo list."
     )]
     async fn set(&self, params: Parameters<SetInput>) -> Result<Json<SetOutput>, McpError> {

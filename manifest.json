@@ -20,11 +20,11 @@
   },
   "tools": [
     {
-      "name": "todolist__get",
+      "name": "get",
       "description": "Get the current state of the todo list"
     },
     {
-      "name": "todolist__set",
+      "name": "set",
       "description": "Replace the entire todo list"
     }
   ],
@@ -38,7 +38,7 @@
   "_meta": {
     "store.tool.mcpb": {
       "scripts": {
-        "build": "cargo build --release"
+        "build": "cargo build --release && mkdir -p dist && cp target/release/todolist dist/"
       },
       "compatibility": {
         "platforms": [
@@ -54,7 +54,7 @@
         "tools/list": {
           "tools": [
             {
-              "name": "todolist__get",
+              "name": "get",
               "description": "Get the current state of the todo list",
               "input_schema": {
                 "type": "object",
@@ -131,7 +131,7 @@
               }
             },
             {
-              "name": "todolist__set",
+              "name": "set",
               "description": "Replace the entire todo list",
               "input_schema": {
                 "type": "object",

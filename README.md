@@ -4,7 +4,7 @@ Session-scoped task tracking for AI agents. Based on [Claude Code's TodoWrite to
 
 ## Tools
 
-### `todolist__get`
+### `get`
 
 Get the current state of the todo list.
 
@@ -23,7 +23,7 @@ Each todo item:
 | `status` | string | One of: `pending`, `in_progress`, `completed` |
 | `activeForm` | string | Task description in present continuous form (e.g., "Fixing authentication bug") |
 
-### `todolist__set`
+### `set`
 
 Replace the entire todo list.
 
@@ -62,7 +62,7 @@ tool validate /path/to/todolist
 
 ```bash
 # Get current todos
-tool call /path/to/todolist -m todolist__get
+tool call /path/to/todolist -m get
 ```
 
 ### Manual Build
