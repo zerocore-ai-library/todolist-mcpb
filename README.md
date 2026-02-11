@@ -67,4 +67,4 @@ Each todo item:
 
 ## License
 
-MIT
+Apache-2.0
